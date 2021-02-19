@@ -13,10 +13,15 @@ pdfJS.getDocument(
       canvas.height = viewport.height;
       canvas.width = viewport.width;
 
-    const renderContext = {
-        canvasContext: context,
-        viewport: viewport
-      };
-      page.render(renderContext);
-    });
+      const renderContext = {
+          canvasContext: context,
+          viewport: viewport
+        };
+        page.render(renderContext);
+      });
+
+      const div = document.createElement('div')
+
+      div.textContent = 'Success!'
+      document.body.appendChild(div)
   })
